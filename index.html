@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form onsubmit="formHandler(event)">
+    <input name="nickname" type="text">
+    <button type="submit">Посмотреть данные</button>
+</form>
+
+<div class="flex">Логин:<p id="info"></p></div>
+<div class="flex">ID:<p id="info1"></p></div>
+<div class="flex">Баланс:<p id="info2"></p></div>
+<table>
+    <tr>
+        <thead>
+            <th>Название операции</th>
+            <th>Комиссия</th>
+            <th>Валюта</th>
+            <th>К продаже</th>
+            <th>Валюта</th>
+            <th>К покупке</th>
+            <th>Валюта</th>
+        </thead>
+        <tbody id="info3">
+
+        </tbody>
+    </tr>
+</table>
+<table>
+    <tr>
+        <thead>
+        <th>Название операции</th>
+        <th>Комиссия</th>
+        <th>Валюта</th>
+        <th>Сумма перевода</th>
+        <th>Валюта</th>
+        <th>От кого</th>
+        <th>Кому</th>
+        </thead>
+    </tr>
+    <tbody id="info4">
+
+    </tbody>
+</table>
+<table>
+    <tr>
+        <thead>
+        <th>Название операции</th>
+        <th>Комиссия</th>
+        <th>Валюта</th>
+        <th>Сумма</th>
+        <th>Валюта</th>
+        <th>Стоимость</th>
+        <th>Клиент</th>
+        <th>Обменник</th>
+        </thead>
+    </tr>
+    <tbody id="info5">
+
+    </tbody>
+</table>
+<div>
+    Контакты:
+    <h4 id="info6"></h4>
+</div>
+<table id="workers"></table>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="request.js"></script>
+</body>
+</html>
