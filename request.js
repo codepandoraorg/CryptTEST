@@ -6,7 +6,7 @@ function getUserInfo(nickname) {
         success: data => {
             $('#info').html(data.account.login);
             $('#info1').html(data.account.id);
-            $('#info2').html(data.account.cwd_balance);
+            $('#info2').html(data.account.cwd_balance/(10 ** (5)));
             var contacts = '';
             Object.values(data.contacts).forEach(e=>{
                 contacts +=('<p>' + e + '</p>');
