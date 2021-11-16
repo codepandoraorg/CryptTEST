@@ -28,10 +28,10 @@ function getUserInfo(nickname) {
                     oper.to = clientReplace(oper.to, data);
                     txt += amountTable(oper);
                 }
-                else if (oper.operation == 'Подтверждение заявки на обмен'){
+                else if (oper.operation == 'Создание заявки на обмен'){
                     oper.amount.asset_id = currencyReplace(oper.amount.asset_id);
                     oper.client = clientReplace(oper.client, data);
-                    oper.reciever = clientReplace(oper.reciever, data);
+                    oper.receiver = clientReplace(oper.receiver, data);
                     accept += clientTable(oper);
                 }
             }
@@ -89,7 +89,7 @@ function clientTable(oper) {
         '<td>' + oper.amount.asset_id + '</td>' +
         '<td>' + oper.price/(10 ** (8)) + '</td>' +
         '<td>' + oper.client + '</td>' +
-        '<td>' + oper.reciever + '</td>' +
+        '<td>' + oper.receiver + '</td>' +
         '</tr>');
 }
 function currencyConvert(currency, amount) {
