@@ -87,7 +87,7 @@ function clientTable(oper) {
         '<td>' + oper.operation + '</td>' +
         '<td>' + currencyConvert(oper.amount.asset_id,oper.amount.amount) + '</td>' +
         '<td>' + oper.amount.asset_id + '</td>' +
-        '<td>' + oper.price/(10 ** (8)) + '</td>' +
+        '<td>' + Math.round(oper.price/(10 ** (8))) + '</td>' +
         '<td>' + oper.client + '</td>' +
         '<td>' + oper.receiver + '</td>' +
         '</tr>');
